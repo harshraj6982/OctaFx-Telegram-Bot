@@ -1,0 +1,12 @@
+Symbol:- USDAUD          0.01 Lot
+
+Copytrader Buy at 131.0001 at 10:31:04
+Me         Buy at 131.0009 at 10:31:11
+Notification at 10:31:15
+
+Copy Trader Sell at 131.0765 at 13:47:51
+Me          Sell at 131.0009 at 13:48:01
+Notification at 13:48:07
+
+
+Message will be sent in this format
