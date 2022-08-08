@@ -11,6 +11,15 @@ file = os.path.basename(__file__)
 bot = file[len(file)-4]
 mid=None
 
+def getRandomProxy():
+    # Using Proxy 
+    proxy = {
+        "http": f"http://Kh072ICB0vRFuRg9:wifi;;@proxy.soax.com:{9000 + random.randint(0, 9)}",
+        "https": f"http://Kh072ICB0vRFuRg9:wifi;;@proxy.soax.com:{9000 + random.randint(0, 9)}"
+    }
+    return proxy
+
+
 while True:
     #t=random.randint(5,7)
     time.sleep(20)
@@ -23,7 +32,7 @@ while True:
                 order=0
         mid=masterid
         URL = "https://www.octafx.com/copy-trade/master/"+str(masterid)+"/history/open/0/"
-        response = requests.get(URL, headers=random_headers_dict)
+        response = requests.get(URL, headers=random_headers_dict, proxies=getRandomProxy())
         if response.status_code==200:
             jsondata = response.json()
             # for i in jsondata['rows']:
